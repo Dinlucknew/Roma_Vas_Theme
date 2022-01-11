@@ -16,6 +16,7 @@
   --highlight: var(--text-color);
   --background: #000900;
   --text-color: #b60101;
+  	--background-secondary-alt: transparent ! important; /* bottom-left account details */
   --textauthor-color: #00ff00 ;
   --close-button: var(--dnd-color) !important;
   --online-color: #39ff14;
@@ -883,13 +884,23 @@ div[class^="splashBackground"] img {
     border: 1px solid var(--highlight);
   }
   
-  /* --== Style Server Boost/Friends page ==-- */
-  .closeWrapper-9ScmSq, .theme-dark .perksModal-fSYqOq, .peopleList-3c4jOR, .peopleColumn-1wMU14 {
-    background-color: var(--background);
+	/* Friends List */
+  #app-mount .container-2cd8Mz, #app-mount .outer-2JOHae {
+    background-color: var(--dplus-bgc-ui-base);
+    border-radius: var(--dplus-radius-ui);
+    overflow: hidden;
     --background-tertiary: transparent;
-    --background-secondary: transparent;
-    background: var(--background-image) center/cover no-repeat;
+    --background-secondary: rgba(var(--black), 0.07);
+    background-color: rgba(var(--black), 0.6);
   }
+
+  	/* Game Library + Nitro Tab */
+.playButton-2Hc0gE, .actionButtonSize-YdOZQv:hover, .rowWrapperActive-nOO7R3 button {
+	background-color: var(--dplus-accent-ui)!important;
+}
+.gameUpdates-3Ts_5W {background: var(--dplus-bg-dark-2);}
+#app-mount .applicationStore-2nk7Lo, .header-2EadGG {background: transparent;}
+.container-36u7Lw, .applicationStore-2nk7Lo {border-radius: var(--dplus-radius-ui);}
   
   /* --== Style the emoji-autocomplete window ==-- */
   .autocompleteInner-zh20B_ {
