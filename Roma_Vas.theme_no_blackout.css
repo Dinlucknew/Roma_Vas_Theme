@@ -1,1 +1,1081 @@
+/**
+ * @name Roma_Vas
+ * @author Dinluck#7908
+ * @version 1.1
+  * @description Авторская работа сделанная под заказ для Roma_Vas 
+* @authorId 747134025738748107
+*/
 
+
+:root, .theme-light {
+	--font-primary: 'Karla', sans-serif;
+	--font-display: var(--font-primary) !important;
+	/* Dark Matter Variables */
+	--avatar-size: 32px;
+	--background-image: url('https://media.discordapp.net/attachments/747533169854644365/898805101521698856/Megumin_KonoSuba_Explosion_Magic_Spell_-_Live_Engine_Wallpaper.png?width=984&height=554');
+	--home-image: url('https://media.discordapp.net/attachments/747533169854644365/898848021855494144/fxVE_1.gif');
+	--background-solid: #161921;
+	--background-solid-dark: #101218;
+	--background-solid-darker: #0c0e12;
+	--accent-alt: 82, 1, 1;
+	--black: 0, 0, 0;
+	--white: 255, 255, 255;
+;
+  --highlight: var(--text-color);
+  --background: #00090091;
+  --text-color: #b60101;
+  --background-secondary-alt: transparent ! important; /* bottom-left account details */
+  --textauthor-color: #00ff00 ;
+  --close-button: var(--dnd-color) !important;
+  --online-color: #39ff14;
+  --afk-color: #FFFF33;
+  --dnd-color: #FF0000;
+  --streaming-color: #bc13fe;
+  --rs-online-color: var(--online-color);
+  --rs-idle-color: var(--afk-color);
+  --rs-dnd-color: var(--dnd-color);
+  --rs-offline-color: gray;
+  --rs-invisible-color: gray;
+  --rs-streaming-color: var(--stream-color);
+  --interactive-hover: var(--highlight);
+  --interactive-active: var(--highlight);
+  --text-link: var(--highlight);
+  --bdfdb-blurple: var(--highlight);
+  --logo-primary: var(--highlight);
+  --focus-primary: var(--highlight);
+  --radio-group-dot-foreground: var(--highlight);
+  --scrollbar-thin-thumb: var(--highlight);
+  --scrollbar-auto-thumb: var(--highlight);
+  --scrollbar-auto-scrollbar-color-thumb: var(--highlight);
+  --scrollbar-thin-track: var(--background);
+  --scrollbar-auto-track: var(--background);
+  --scrollbar-auto-scrollbar-color-track: var(--background);
+  --activity-card-background: var(--background);
+  --background-primary: var(--background);
+  --background-mobile-primary: var(--background);
+  --background-secondary: var(--background);
+  --background-mobile-secondary: var(--background);
+  --background-secondary-alt: var(--background);
+  --background-tertiary: var(--background);
+  --background-accent: var(--background);
+  --background-floating: var(--background);
+  --text-normal: var(--text-color);
+  --text-muted: var(--text-color);
+  --header-primary: var(--text-color);
+  --header-secondary: var(--text-color);
+  --channels-default:var(--text-color);
+  --interactive-normal: var(--text-color);
+  --channeltextarea-background: var(--background);
+  --dplus-bgc-ui-base: rgba(0, 0, 0, 0);
+  --dplus-radius-ui: rgba(0, 0, 0, 0);
+}
+
+/* --== Add CRT effect ==-- */
+html,body::before, .theme-dark .perksModal-fSYqOq::before,
+.standardSidebarView-3F1I7i::before, .userPopout-3XzG_A::before,
+.inner-1ilYF7::before, .container-1CE3eW::before, .resultsGroup-r_nuzN::before,
+.theme-dark .root-1gCeng::after, .container-1r6BKw.themed-ANHk51::after,
+.drawerSizingWrapper-17Mss4::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+/* --== Make sure the BetterDiscord version is readable ==-- */
+.colorMuted-HdFt4q {
+  color: var(--text-color);
+}
+
+/* --== Make sure everything's still clickable ==-- */
+body *, .userPopout-3XzG_A * {
+  pointer-events: auto;
+}
+
+/* --== Okay maybe not everything... ==-- */
+.target-1eRTCg, .centerTarget-S6BLFQ,
+.spoilerText-3p6IlD.hidden-HHr2R9 .inlineContent-3ZjPuv .wrapper-3WhCwL,
+.layer-1Ixpg3 {
+  pointer-events: none !important;
+}
+
+.autoPointerEvents-2oNo2f {
+  pointer-events: auto !important;
+}
+
+.wordmarkWindows-1v0lYD svg {
+  width: 0px;
+}
+
+
+
+/* Scrollbars */
+
+ ::-webkit-scrollbar {
+	width: 14px !important;
+}
+
+ ::-webkit-scrollbar-thumb {
+	border-radius: 8px !important;
+	border: none !important;
+	border: 3px solid transparent !important;
+
+}
+
+ ::-webkit-scrollbar-track {
+	visibility: visible !important;
+	border-radius: 8px !important;
+	border: 3px solid transparent !important;
+	background-color: rgba(0, 0, 0, 0.3) !important;
+	background-clip: padding-box !important;
+}
+
+.none-2Eo-qx::-webkit-scrollbar {
+	display: none !important;
+}
+
+
+/* Titlebar */
+
+div[class*="typeWindows-"] {
+	--background-modifier-hover: rgba(var(--white), 0.05);
+	--background-modifier-active: rgba(var(--white), 0.075);
+	height: 26px;
+}
+
+div[class*="typeWindows-"]>div:first-child {
+	display: none;
+}
+
+div[class*="typeWindows-"]>div[role="button"] {
+	height: 30px;
+	width: 36px;
+}
+
+div[class*="typeWindows-"]::after {
+	content: ' 𝓡𝓸𝓶𝓪 𝓥𝓪𝓼 𝒷𝓎 𝐃𝐢𝐧𝐥𝐮𝐜𝐤 ';
+	font-weight: 5000;
+	line-height: 31px;
+	color: var(--textauthor-color);
+	font-size: 14px;
+	position: absolute;
+	padding: 0 12px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	background: rgba(var(--black), 0);
+	z-index: -1;
+}
+
+
+/* Guilds */
+
+ul[data-list-id='guildsnav'] {
+	--background-secondary: var(--background-solid);
+    	--background-primary: rgba(var(--white), 0.1);
+	margin-bottom: 70px;
+	background-color: rgba(var(--black), 0.6);
+	border-right: 1px solid rgba(var(--black), 0.2);
+	box-shadow: inset -10px 0px 20px -10px rgba(var(--black), 0.3);
+}
+
+ul[data-list-id='guildsnav'] ::-webkit-scrollbar {
+	display: none;
+}
+
+ul[data-list-id='guildsnav']>div[dir] {
+	padding-top: 18px;
+}
+
+ul[data-list-id='guildsnav'] [class^="pill-"],
+ul[data-list-id='guildsnav'] [class^="pill-"]>div {
+	height: 40px !important;
+}
+
+ul[data-list-id='guildsnav'] div[style*="height: 56"],
+ul[id^="folder-items-"] {
+	height: auto !important;
+}
+
+ul[data-list-id='guildsnav'] [class^="pill-"] span {
+	width: 10px;
+	margin-left: -5px;
+	border-radius: 20px;
+}
+
+[data-list-id='guildsnav'] [class^="pill-"] span[style^="opacity: 1; height: 40"] {
+	--header-primary: rgba(var(--accent), 1);
+}
+
+span[class^="expandedFolderBackground-"] {
+	--background-secondary: rgba(var(--black), 0.25);
+	border-radius: 14px;
+	width: 40px;
+	left: 16px;
+}
+
+.wrapper-25eVIn {
+	zoom: .83334;
+}
+
+svg[class^="placeholderMask-"] {
+	width: 40px;
+	height: 40px;
+}
+
+div[data-list-item-id="guildsnav___home"] {
+	background: var(--home-image) top center/110% no-repeat;
+}
+
+div[class^="unreadMentionsIndicatorBottom-"] {
+	bottom: 70px;
+}
+
+#app-mount [data-list-item-id="guildsnav___home"]>div {
+	color: transparent;
+	background-color: transparent;
+}
+
+div[data-list-item-id="guildsnav___create-join-button"],
+div[data-list-item-id="guildsnav___guild-discover-button"] {
+	transition: 150ms ease;
+	opacity: 0.5;
+	background-color: var(--background-solid) !important;
+	color: rgba(var(--white), 0.3) !important;
+	border: 1px dashed rgba(var(--white), 0.3);
+	border-radius: 50px;
+}
+
+div[data-list-item-id="guildsnav___create-join-button"]:hover,
+div[data-list-item-id="guildsnav___guild-discover-button"]:hover {
+	opacity: 1;
+}
+
+
+/* Sidebar */
+
+.platform-win [class^="sidebar-"] {
+	border-radius: 0;
+}
+
+div[class^="sidebar-"] nav,
+#private-channels {
+	background-color: transparent;
+	--background-tertiary: rgba(var(--black), 0.35);
+}
+
+div[class^="sidebar-"]>nav>div[class^="searchBar"] {
+	height: 54px;
+}
+
+div[id^="members-"] {
+	--background-secondary: rgba(var(--black), 0.4);
+	--background-modifier-hover: rgba(var(--white), 0.07);
+	--background-modifier-active: var(--background-modifier-hover);
+	--background-modifier-selected: rgba(var(--white), 0.07);
+}
+
+div[id^="members-"]>div {
+	background-color: transparent;
+}
+
+div[id^="members-"] [class*="placeholder"] {
+	--backgorund-primary: var(--text-normal);
+}
+
+div[class^='nowPlayingColumn'] {
+	--background-secondary: transparent;
+	--background-primary: rgba(var(--black), 0);
+	--background-modifier-hover: rgba(var(--white), 0.075);
+}
+
+#channels div[class^="unread-"] {
+	--interactive-active: rgba(var(--accent), 1);
+}
+
+
+/* Sidebar Header */
+
+div[class*='clickable-'][aria-expanded]>header {
+	height: 54px;
+	--background-accent: rgba(var(--accent), 1);
+	--background-modifier-hover: rgba(var(--black), 0);
+}
+
+
+/* Outer containers */
+
+#app-mount {
+	--background-tertiary: transparent;
+	--background-secondary: transparent;
+	background: var(--background-image) center/cover no-repeat;
+}
+
+/* затенение фона */
+
+#app-mount>div[class^="app-"] {
+	--background-tertiary: transparent;
+	--background-secondary: rgba(var(--black), 0);
+	background-color: rgba(var(--black), 0);
+}
+
+nav+div [class^='sidebar-'],
+nav+div[class^='base-'] {
+	overflow: visible !important;
+	position: relative;
+	max-width: calc(100% - 72px);
+}
+
+nav+div[class^='base-'] > div[class^="notice"] {
+	border-radius: 0;
+}
+/*Расширенные настройки затенения фона */
+div[class^='base-']>div {
+	--background-secondary: rgba(var(--black), 0);
+	--background-tertiary: rgba(var(--white), 0);
+	--background-primary: rgba(var(--black), 0);
+}
+
+#app-mount>div:not([class^="app-"]),
+.autocomplete-1vrmpx {
+	--background-primary: var(--background-solid);
+	--background-secondary: var(--background-solid-dark);
+	--background-tertiary: var(--background-solid-darker);
+}
+
+
+/* Header */
+
+section[class*="themed-"] {
+	height: 54px;
+	box-shadow: var(--elevation-low);
+	--background-secondary: rgba(var(--white), 0.1);
+}
+
+section>div>a[href="https:https://support.discord.com"] {
+	display: none;
+}
+
+section[class*="themed-"]::before,
+section[class*="themed-"] ::after {
+	content: none;
+}
+
+section div[class^="toolbar"]>div[role] {
+	margin: 0 4px;
+	transition: 150ms ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3px;
+	width: 28px;
+	height: 28px;
+}
+
+section div[class^="toolbar"]>div[role] svg {
+	width: 22px;
+}
+
+section div[class^="toolbar"]>div[role][class*="selected-"] {
+	background-color: rgba(var(--white), 0.1);
+}
+
+/* Codeblocks */
+
+html pre {
+	border-radius: 0;
+	background: transparent;
+	border-color: rgba(255, 255, 255, 0.1);
+}
+
+pre code.hljs {
+	border: none;
+	background-color: rgba(var(--white), 0.1);
+	color: rgba(var(--white), 0.7);
+	padding: 1em;
+}
+
+html code.inline,
+html code.inline {
+	background: rgba(var(--white), 0.1);
+	color: rgba(var(--white), 0.7);
+	padding: 0.3em 0.6em;
+	border-radius: 3px;
+}
+
+
+/* Настройки */
+
+div[aria-label*="_SETTINGS"],
+div[aria-label*="_DEBUG"] {
+	--background-primary: transparent;
+	--background-secondary: rgba(var(--black), 0);
+}
+
+div[class^="sidebarRegionScroller-"]>nav {
+	--background-secondary: transparent;
+}
+
+div[class^="contentRegion-"] {
+	--background-primary: rgba(var(--black), 0);
+}
+
+div[class^="contentRegion-"] div[style^="overflow: hidden scroll"] {
+	background-color: transparent;
+	--background-primary: rgba(var(--black), 0.1);
+	--background-secondary: rgba(var(--black), 0.2);
+	--background-secondary-alt: rgba(var(--black), 0.25);
+	--background-tertiary: rgba(var(--white), 0.1);
+}
+
+div[aria-label*="_SETTINGS"] aside>div {
+	--background-primary: transparent;
+}
+
+div[aria-label*="_SETTINGS"] aside>div::-webkit-scrollbar-track {
+	visibility: hidden !important;
+}
+
+.bd-addon-list {
+	--background-secondary: var(--background-solid);
+	--background-secondary-alt: var(--background-solid-dark);
+}
+
+
+/* Tab Bar */
+
+div[class*="topPill"],
+nav>div[role="tablist"],
+.bd-tab-bar {
+	--background-accent: rgba(var(--accent));
+	--background-modifier-hover: rgba(var(--white), 0.05);
+	--background-modifier-active: rgba(var(--white), 0.075);
+	--background-modifier-selected: rgba(var(--accent), 0.25);
+}
+
+
+/* Server Discovery */
+
+div[class^="sidebar"]+[class^="pageWrapper"] {
+	--background-secondary: rgba(var(--black), 0);
+	background-color: var(--background-secondary);
+}
+
+
+/* Crash Page */
+
+div[class*="errorPage"] {
+	--background-secondary: rgba(var(--black), 0) !important;
+}
+
+
+/* Tooltips */
+
+div[class^="tooltip-"] {
+	--background-floating: rgba(var(--accent-alt), 1);
+	--text-normal: #e0e0e0;
+}
+
+
+/* Buttons */
+
+button[class*="button-"][class*="color"],
+.bd-button {
+	--vaccentcolor: var(--accent-alt);
+}
+
+.bd-button {
+	--bd-blue: rgba(var(--accent-alt), 1);
+}
+
+
+
+/* Context Menu */
+
+div[role="menuitem"] {
+	--vaccentcolor: var(--accent-alt);
+}
+
+div[role="menuitem"]:active {
+	--vaccentcolor: var(--accent);
+}
+
+
+/* Depreceated Components */
+
+
+/* These use hardcoded colors, no need to bother with strange selectors */
+
+#app-mount .footer-2gL1pp,
+#app-mount .footer-3mqk7D {
+	background-color: var(--background-secondary);
+	box-shadow: none;
+}
+
+#app-mount .root-1gCeng,
+#app-mount .addGamePopout-2RY8Ju,
+#app-mount .keyboardShortcutsModal-3piNz7,
+#app-mount .emojiAliasInput-1y-NBz .emojiInput-1aLNse,
+.perksModal-fSYqOq .perk-2WeBWW,
+#app-mount .uploadModal-2ifh8j,
+#app-mount .contentWrapper-3WC1ID,
+#app-mount .contentWarningPopout-n5JsIs {
+	background-color: var(--background-primary);
+}
+
+#app-mount .codeRedemptionRedirect-1wVR4b,
+#app-mount .userSettingsVoice-iwdUCU .previewOverlay-2O7_KC,
+#app-mount .inset-3sAvek {
+	background-color: var(--background-tertiary);
+	border: none;
+}
+
+#app-mount .paymentPane-3bwJ6A,
+#app-mount .tierBody-x9kBBp,
+#app-mount .tierBody-16Chc9,
+#app-mount .barBackground-2EEiLw,
+#app-mount .body-3iLsc4,
+#app-mount .footer-1fjuF6,
+#app-mount .container-3ayLPN,
+#app-mount .colorPickerCustom-2CWBn2,
+#app-mount .tierMarkerBackground-3q29am,
+.css-3vaxre-menu,
+.css-dwar6a-menu,
+#app-mount .autocomplete-1vrmpx,
+.categoryHeader-O1zU94,
+#app-mount .popoutList-T9CKZQ,
+#app-mount .quickSelectPopout-X1hvgV,
+.colorable-1bkp8v.primaryDark-3mSFDl,
+.tile-2naSqK,
+.videoWrapper-2v09vt,
+#app-mount .spoilerText-3p6IlD.hidden-HHr2R9 {
+	background-color: var(--background-solid);
+}
+
+#app-mount .expandedInfo-3kfShd,
+#app-mount .tierHeaderLocked-1a2opw,
+#app-mount .tierHeaderLocked-1s2JJz,
+#app-mount .headerNormal-T_seeN,
+#app-mount .focused-2bY0OD,
+.colorable-1bkp8v.primaryDark-3mSFDl:hover {
+	background-color: var(--background-solid-dark);
+}
+
+#app-mount .payment-xT17Mq {
+	background-color: transparent;
+	border-bottom-color: rgba(var(--white), 0.025);
+}
+
+#app-mount .bottomDivider-1K9Gao,
+#app-mount .focused-2bY0OD {
+	border-bottom-color: var(--background-solid-dark);
+}
+
+#app-mount div[data-list-id="billing-history"],
+#app-mount .media-engine-video,
+.react-datepicker,
+.react-datepicker__header,
+.react-datepicker__day--outside-month,
+.react-datepicker__day--disabled {
+	background-color: transparent !important;
+}
+
+.react-datepicker__day--disabled {
+	opacity: .6;
+}
+
+#app-mount .react-datepicker__day {
+	border-top-color: var(--background-secondary);
+	border-left-color: var(--background-secondary);
+}
+
+#app-mount .background-3xPPFc,
+#app-mount .tierInProgress-3mBoXq {
+	color: var(--background-solid);
+}
+
+.option-96V44q:after {
+	content: none;
+}
+
+#app-mount .option-96V44q.selected-rZcOL-,
+#app-mount .selected-1Tbx07,
+#app-mount .quickSelectPopoutOption-opKBx9:hover,
+#app-mount .outer-1AjyKL.active-1xchHY,
+#app-mount .outer-1AjyKL.interactive-3B9GmY:hover {
+	background-color: var(--background-modifier-hover);
+}
+
+.css-3vaxre-menu,
+.tierMarker-5HkGJ_[style] {
+	border-color: rgba(var(--white), 0.025) !important;
+}
+
+#app-mount .searchAnswer-3Dz2-q,
+#app-mount .searchFilter-2ESiM3,
+#app-mount .option-1B5ZV8,
+#app-mount .pill-2pQByF {
+	background-color: rgba(var(--accent-alt), 1);
+	color: #fff;
+}
+
+#app-mount .keybindShortcut-1BD6Z1 span {
+	background: var(--background-solid-dark);
+	box-shadow: inset 0 -4px 0 var(--background-solid-darker);
+}
+
+#app-mount .perksModal-fSYqOq {
+	background: rgba(var(--black), 0);
+}
+
+#app-mount .card-FDVird:before {
+	background: var(--background-modifier-hover);
+	border: none;
+}
+
+
+/* Login Page */
+
+div[class^="splashBackground"] canvas,
+div[class^="splashBackground"] img {
+	display: none;
+}
+
+/* USRBG */
+
+/*
+ * USRBG User-Popout Implimentation
+ * 
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+*/
+
+.userPopout-3XzG_A {
+	overflow: hidden;
+	transform: translateZ(0) !important;
+	--USRBG-banner-height: 60px;
+}
+
+.userPopout-3XzG_A[style*="-user-"] {
+	--USRBG-banner-height: 120px;
+	--USRBG-avatar-offset: 76px;
+}
+
+.userPopout-3XzG_A[style*="-user-"] .profileBanner-33-uE1 {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: var(--user-popout-position, center) center;
+	background-image: var(--user-background);
+}
+
+.userPopout-3XzG_A[style*="-user-"] .profileBanner-33-uE1 {
+	height: var(--USRBG-banner-height, 120px);
+}
+
+.userPopout-3XzG_A[style*="-user-"] .avatarWrapperNormal-2tu8Ts {
+  	top: var(--USRBG-avatar-offset, 76px);
+}
+
+.userPopout-3XzG_A:not([style*="-user-"]) .avatar-22FtUu,
+.userPopout-3XzG_A:not([style*="-user-"]) .avatarHint-1E3LMl{
+	z-index: 1;
+}
+
+.userPopout-3XzG_A:not([style*="-user-"]) .avatar-22FtUu::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+	height: var(--USRBG-banner-height, 60px);
+	pointer-events: none;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: var(--user-popout-position, center) center;
+	background-image: var(--user-background);
+}
+
+/*
+======================================================================================
+*/
+
+.theme-dark .headerNormal-T_seeN {
+    background-color: var(--background);
+}
+
+.userPopout-3XzG_A {
+	transform:translateZ(0);
+}
+
+.headerTop-3C2Zn0 {
+    background: transparent !important;
+    background-color: unset;
+}
+
+.headerInfo-30uryT *, .tabBarItem-1b8RUP *, .activity-1ythUs * {
+  color: var(--highlight) !important;
+}
+
+.userPopout-3XzG_A .wrapper-3t9DeA::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
+	opacity: .5;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: var(--user-popout-position) center;
+	background-image: var(--user-background);
+	-webkit-mask-image: linear-gradient(#000, transparent);
+}
+
+.userPopout-3XzG_A  .header-2BwW8b,
+.userPopout-3XzG_A  .scroller-2FKFPG,
+.userPopout-3XzG_A  .footer-1fjuF6 {
+	z-index: 1;
+}
+
+.userPopout-3XzG_A {
+  --user-popout-position: center
+}
+
+.root-SR8cQa {
+  transform: translateZ(0);
+}
+.header-QKLPzZ .wrapper-3t9DeA::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  pointer-events: none;
+  background: var(--user-background) center/cover no-repeat;
+  -webkit-mask: linear-gradient(black, transparent 0%);
+}
+
+.headerInfo-30uryT,
+.tabBarItem-1b8RUP,
+.activity-1ythUs {
+  z-index: 1;
+  position: relative;
+}
+
+.headerTop-3C2Zn0 {
+  background: transparent !important;
+  background-color: unset;
+}
+
+.newMessagesBar-265mhP {
+  background-color: var(--highlight);
+}
+
+.newMessagesBar-265mhP * {
+  color: var(--background);
+}
+
+/* --== Style the unread message bar ==-- */
+.isUnread-3Ef-o9 {
+  border-color: var(--highlight);
+}
+
+
+
+.isUnread-3Ef-o9 .content-1o0f9g {
+  color: var(--highlight);
+  border: 1px solid var(--highlight);
+}
+
+.wrapper-2jXpOf:hover > .unread-2lAfLh {
+  background-color: var(--highlight);
+}
+
+.unreadPill-2HyYtt {
+  background-color: var(--highlight);
+  color: var(--background);
+}
+
+.guildSeparator-33mFX6 {
+  background-color: var(--highlight);
+  border-radius: 2px;
+}
+
+.unreadPillCapStroke-7rkHbg {
+  color: var(--highlight);
+  fill: var(--highlight);
+}
+
+ /* --== Re-color blue/gray button(s) ==-- */
+  .lookFilled-1Gx00P.colorBrand-3pXr91,
+  .theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6,
+  .theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV {
+    background-color: var(--background);
+    color: var(--highlight);
+    border: 1px solid var(--highlight);
+    transition-duration: .3s;
+  }
+  
+  .lookFilled-1Gx00P.colorBrand-3pXr91:hover,
+  .theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:hover,
+  .theme-dark .lookFilled-1Gx00P.colorGrey-2DXtkV:hover {
+    background-color: var(--highlight);
+    color: var(--background);
+  }
+  
+  .theme-dark .lookLink-9FtZy-.colorPrimary-3b3xI6 {
+    color: var(--highlight);
+  }
+  
+  .theme-dark .lookLink-9FtZy-.colorPrimary-3b3xI6:hover > div {
+    background-image: linear-gradient(0deg,transparent,transparent 1px,var(--highlight) 0,var(--highlight) 2px,transparent 0) !important;
+  }
+  
+  /* --== Style home button ==-- */
+  .wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9, .wrapper-1BJsBx:hover .childWrapper-anI2G9 {
+    background-color: var(--highlight);
+  }
+  
+  .wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9 svg path, .wrapper-1BJsBx:hover .childWrapper-anI2G9 svg path {
+    fill: var(--background);
+  }
+  
+  .homeIcon-FuNwkv path {
+    fill: var(--highlight);
+  }
+  
+  /* --== Style GIF Picker text's ==-- */
+  
+  .theme-dark .categoryText-2-8pri, .theme-light .categoryText-2-8pri  *{
+    color: var(--highlight);
+  }
+  
+  /* --== Style codeblocks and Markdown notation in Chat inputbox ==-- */
+  .codeBlockSyntax-2i-tMA, .syntaxAfter-hcA4AH, .syntaxBefore-1YQ9lW {
+    color: var(--highlight);
+  }
+  
+  /* --== Style "Create Server" popout ==-- */
+  .markup-2BOw-j code {
+    border: 1px solid var(--highlight);
+  }
+  
+  .colorHeaderPrimary-26Jzh- {
+    color: var(--highlight);
+  }
+  
+  .root-1gCeng, .theme-light .footer-2gL1pp {
+    background-color: var(--background) !important;
+  }
+  
+  /* --== Style server explorer ==-- */
+  .scroller-1d5FgU {
+    background-color: var(--background);
+  }
+  
+  .notice-2X5hT5 {
+    background-color: var(--background);
+    border: 1px solid var(--highlight);
+  }
+
+  	/* Calling */
+.controlButton-2PMNom foreignObject {mask: none;}
+#app-mount .wrapper-1gVUIN {
+	background-color: var(--dplus-bgc-ui-base)!important;
+}
+.videoWrapper-3rtb_V, :not(:root):-webkit-full-screen::backdrop, .callContainer-HtHELf {background-color: transparent;}
+
+.videoHeight-3XhdTL.noChat-3QkBOE {
+	height: 100%;
+}
+.streamPreviewWrapper-rIrOy5 {padding: 0;}
+.colorable-3rVGna.primaryDark-2UJt1G {background-color: var(--dplus-bgc-ui-base);}
+.colorable-3rVGna.primaryDark-2UJt1G:hover {background-color: var(--background-accent);}
+.tile-2TcwiO {background: transparent!important;}
+.background-L8lGH6 {background-color: var(--dplus-bg-1)!important;}
+.avatarSpeaking-2pCGrZ, .border-2Vy6FN.speaking-7QZEkv, .border-2BJQjd.speaking-3RWJBr, .avatarSpeaking-33RRJU {
+
+}
+  
+	/* Friends List */
+  #app-mount .container-2cd8Mz, #app-mount .outer-2JOHae {
+    background-color: var(--dplus-bgc-ui-base);
+    border-radius: var(--dplus-radius-ui);
+  }
+
+  	/* Game Library + Nitro Tab */
+.playButton-2Hc0gE, .actionButtonSize-YdOZQv:hover, .rowWrapperActive-nOO7R3 button {
+	background-color: var(--dplus-accent-ui)!important;
+}
+.gameUpdates-3Ts_5W {background: var(--dplus-bg-dark-2);}
+#app-mount .applicationStore-2nk7Lo, .header-2EadGG {background: transparent;}
+.container-36u7Lw, .applicationStore-2nk7Lo {border-radius: var(--dplus-radius-ui);}
+  
+  /* --== Style the emoji-autocomplete window ==-- */
+  .autocompleteInner-zh20B_ {
+    background-color: var(--background);
+  }
+  
+  /* --== Style the user popout ==-- */
+  .userPopout-3XzG_A {
+    margin-right: 1vw;
+    border: 1px solid var(--highlight);
+  }
+  
+  .headerPlaying-j0WQBV, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6,
+  .headerTop-3C2Zn0 {
+    background-color: var(--background);
+  }
+  
+  .input-cIJ7To.focused-1mmYsC, .input-cIJ7To:focus {
+    border: 1px solid var(--highlight);
+  }
+  
+  .header-QKLPzZ {
+    background-color: var(--background);
+  }
+  
+  .headerFill-adLl4x {
+    background-color: var(--background);
+  }
+  
+  .lookFilled-1Gx00P.colorGreen-29iAKY, .lookInverted-2D7oAl.colorBrand-3pXr91 {
+    background-color: var(--background);
+    color: var(--highlight);
+    transition-duration: .3s;
+  }
+  
+  .lookFilled-1Gx00P.colorGreen-29iAKY:hover, .lookInverted-2D7oAl.colorBrand-3pXr91:hover {
+    background-color: var(--highlight);
+    color: var(--background);
+  }
+  
+  /* --== Style search popout ==-- */
+  .input-2VB9rf {
+    background-color: var(--background);
+  }
+  
+  .inner-1ilYF7 * {
+    font-family: 'Share Tech Mono', monospace;
+  }
+  
+  .resultsGroup-r_nuzN {
+    background-color: var(--background);
+  }
+  
+  .resultsGroup-r_nuzN * {
+    color: var(--highlight) !important;
+  }
+  
+  .theme-dark .option-96V44q:after {
+    display: none;
+  }
+  
+  /* --== Style "Reactions" popout ==-- */
+  .theme-dark .container-1If-HZ, .theme-dark .reactors-Blmlhw, .theme-dark .scroller-1-nKid {
+    background-color: var(--background);
+  }
+  
+  /* --== Style payment page ==-- */
+  .theme-dark .paymentPane-3bwJ6A div, .theme-dark .codeRedemptionRedirect-1wVR4b {
+    background-color: var(--background);
+  }
+  
+  /* --== Style audio/video settings ==-- */
+  .css-1ye7vu0, .horizontal-1ae9ci>.flex-1xMQg5:last-child, .horizontal-1ae9ci>.flexChild-faoVW3:last-child {
+    background-color: var(--background);
+  }
+  
+  /* --== Style "activity" settings ==-- */
+  .theme-dark .notDetected-33MY4s, .theme-light .notDetected-33MY4s,
+  .theme-dark .addGamePopout-2RY8Ju {
+    background-color: var(--background);
+  }
+  
+  /* --== Style color picker ==-- */
+  .theme-dark .colorPickerCustom-2CWBn2 {
+    background-color: var(--background);
+  }
+  
+  /* --== Style phonenumber input ==-- */
+  .theme-dark .elevationBorderLow-2qgTRQ {
+    background-color: var(--background);
+  }
+  
+  /* --== Style create DM Group ==-- */
+  .nameTag-m8r81H {
+    color: var(--highlight);
+  }
+  
+  /* --== Style Keyboard shortcuts modal ==-- */
+  .theme-dark .keyboardShortcutsModal-3piNz7 {
+    background-color: var(--background);
+  }
+  
+  /* --== Style boost server plus and minus buttons ==-- */
+  .theme-dark .iconWrapper-3LVgIo {
+    background-color: var(--background);
+  }
+  
+  /* --== Style custom emoji upload page ==-- */
+  .theme-dark .card-FDVird:before, .emojiRow-zIc7ZX:focus-within .emojiRemove-1k6MlJ, .emojiRow-zIc7ZX:hover .emojiRemove-1k6MlJ,
+  .theme-dark .emojiAliasInput-1y-NBz .emojiInput-1aLNse {
+    background-color: var(--background);
+  }
+  
+  /* --== Style datepicker I suppose? Why is this stuff so convoluted?! ==-- */
+  .theme-dark .calendarPicker-2yf6Ci .react-datepicker,
+  .theme-dark .datePicker--XZbmJ .datePickerHint-3Q1Udw,
+  .theme-dark .datePicker--XZbmJ,
+  .theme-dark .calendarPicker-2yf6Ci .react-datepicker__current-month,
+  .theme-dark .calendarPicker-2yf6Ci .react-datepicker__header,
+  .theme-dark .calendarPicker-2yf6Ci .react-datepicker__day,
+  .theme-dark .calendarPicker-2yf6Ci .react-datepicker__day.react-datepicker__day--disabled, .theme-dark .calendarPicker-2yf6Ci .react-datepicker__day.react-datepicker__day--disabled:hover,
+  .datePicker--XZbmJ .datePickerHint-3Q1Udw .hint-165cR4 {
+    background-color: var(--background);
+  }
+  
+  /* --== Style upload modal ==-- */
+  .uploadModal-2ifh8j .inner-3nWsbo, .theme-dark .uploadModal-2ifh8j, .uploadModal-2ifh8j .footer-3mqk7D.hasSpoilers-1IRtQC {
+    background-color: var(--background);
+  }
+  
+  /* --== Style search panel ==-- */
+  .theme-dark .focused-2bY0OD {
+    background-color: var(--background);
+  }
+  
+  /* --== Style "Connected apps" info ==-- */
+  .formNotice-2_hHWR {
+    background-color: var(--background);
+  }
+  
+  /* --== Style Invite friends to this server modal ==-- */
+  .theme-dark .footer-1FPmkC {
+    background-color: var(--background);
+  }
+  
+  .input-cIJ7To.focused-1mmYsC, .input-cIJ7To:focus {
+    border: none;
+  }
+  
+  .theme-dark .checkBoxLabel-4PWfpk, .theme-dark .footerText-2a7NxZ, .theme-dark .subText-bCySlS {
+    color: var(--highlight);
+  }
+  
+  /* --== Style custom status ==-- */
+  .theme-dark .footer-2gL1pp {
+    background-color: var(--background);
